@@ -40,7 +40,7 @@ let currentquestion = 0;
 let score = 0;
 let timer = 60;
        
-     // Timer for questions
+    
       function StartTimer(){
 
         let intervalID;
@@ -74,7 +74,7 @@ let timer = 60;
       }
 
 
-// function for displaying questions;
+
 
 function DisplayQuestion(){
           
