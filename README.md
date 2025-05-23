@@ -13,7 +13,7 @@ will you emerge as the ultimate quiz champion??
 
 FEATURES :
  
-1. You can choose theme either in white theme or in dark theme .
+1. You can toogle theme either in white theme or in dark theme .
 2. you will be given 5 Technology based questions.
 3. you have time of 60 seconds for all questions.
 4. If you give correct answer you will get 1 score and if you didn't you score will not increase.

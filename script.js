@@ -36,12 +36,16 @@ const questions = [
 ];
 
 
+
+
+     
+
 let currentquestion = 0;
 let score = 0;
 let timer = 60;
-       
+
+function StartTimer(){
     
-      function StartTimer(){
 
         let intervalID;
         const TimerElement = document.getElementById('Timer');
@@ -82,7 +86,9 @@ function DisplayQuestion(){
 
         const Complete = document.getElementById('Complete-msg');
         if(Complete){
-            Complete.textContent = 'Quiz Completed';
+            Complete.textContent = `Quiz Completed
+            You get ${score} scores out of 5
+            `;
         }
         return;
       }
@@ -97,13 +103,13 @@ function DisplayQuestion(){
         button.textContent = options;
         button.style.backgroundColor = "Pink";
         button.style.border = "none";
-        button.style.padding = "10px";
+        button.style.padding = "12px";
         button.style.margin = "10px";
 
-
+        
         button.onclick = ()=>{
        checkAnswer(options)
-        };
+    };
 
         optionsElement.appendChild(button);
         
@@ -114,16 +120,20 @@ function DisplayQuestion(){
 
 function checkAnswer(Selectoption){
   
-     const correctAnswer = questions[currentquestion].answer;
+    const correctAnswer = questions[currentquestion].answer;
      let Result = document.getElementById('Result');
 
      if(Selectoption === correctAnswer){
       Result.textContent = 'Correct';
+      Result.style.border = '1px solid green';
+      Result.style.borderRadius = '10px';
       score++
      }
 
      else{
-        Result.textContent = `Incorrect The answer is ${questions[currentquestion].answer}`
+        Result.textContent = `Incorrect The answer is ${questions[currentquestion].answer}`;
+           Result.style.border = '1px solid red';
+      Result.style.borderRadius = '10px';
      }
 
      let ScoreElement = document.getElementById('Score');
@@ -135,6 +145,17 @@ function checkAnswer(Selectoption){
 };
 
 
+const Start = document.getElementById('Start');
+Start.addEventListener('click',()=>{
+    Start.style.display = "none";
+    StartTimer();
+    // DisplayQuestion();
+})
+
+
 
 DisplayQuestion();
-StartTimer();
+ function helo(){
+    console.log("HELLO WORLD")
+ };
+//  helo();

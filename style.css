@@ -41,3 +41,28 @@ header{
     justify-content: center;
     align-items:center ;
 }
+.output{
+    width: 300px;
+}
+#Result{
+    padding: 5px;
+}
+
+#Score{
+    border: 1px solid blue;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+
+
+
+#Start{
+    background-color: palevioletred;
+    color: white;
+    font-size: 19px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+
+}
